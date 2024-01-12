@@ -11,7 +11,8 @@ const Subscriber = sequelize.define<SubscriberModel>('Subscriber', {
   },
   userId: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   chatId: {
     type: DataTypes.INTEGER,

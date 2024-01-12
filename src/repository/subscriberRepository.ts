@@ -1,7 +1,7 @@
 import { Result, SubscriberModel } from "@/interface/types";
 import Subscriber from "@/model/subscriberModel";
 
-export const registerSubscriber = async (userId: number, chatId: number, username: string): Promise<Result<SubscriberModel>> => {
+export const createSubscriber = async (userId: number, chatId: number, username: string): Promise<Result<SubscriberModel>> => {
   try {
     const result = await Subscriber.create({ userId, chatId, username })
     console.log('Subscriber created successfully:', result);
